@@ -1,0 +1,6 @@
+<resources>
+    <plurals name="image">
+        <item quantity="one">Are you sure you want to delete the %d image</item>
+        <item quantity="other">Are you sure you want to delete the %d images</item>
+    </plurals>
+</resources>

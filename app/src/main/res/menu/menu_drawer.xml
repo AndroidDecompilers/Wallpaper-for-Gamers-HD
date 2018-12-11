@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/grp"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_recent"
+            android:checked="true"
+            android:icon="@drawable/ic_drawer_recent"
+            android:title="@string/drawer_recent"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_favorite"
+            android:icon="@drawable/ic_toolbar_love"
+            android:title="@string/drawer_favorite"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_autowallpaper"
+            android:icon="@drawable/ic_auto"
+            android:title="@string/auto_wallpaper"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_downloaded"
+            android:icon="@drawable/ic_toolbar_download"
+            android:title="@string/downlaoded"
+            android:visible="true" />
+    </group>
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_gdpr"
+            android:icon="@drawable/ic_gdpr"
+            android:title="GDPR"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_privacy"
+            android:icon="@drawable/ic_policy"
+            android:title="@string/drawer_policy"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_about"
+            android:icon="@drawable/ic_dmca"
+            android:title="About"
+            android:visible="true" />
+    </group>
+    <group
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_gdpr2"
+            android:icon="@drawable/ic_gdpr"
+            android:title=""
+            android:visible="false" />
+        <item
+            android:id="@+id/drawer_rate"
+            android:icon="@drawable/ic_drawer_rate"
+            android:title="@string/drawer_rate"
+            android:visible="true" />
+        <item
+            android:id="@+id/drawer_share"
+            android:icon="@drawable/ic_drawer_share"
+            android:title="@string/drawer_share"
+            android:visible="true" />
+    </group>
+</menu>

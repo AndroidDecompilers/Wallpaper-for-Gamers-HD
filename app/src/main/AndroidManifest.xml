@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kkinfosis.gamingwallpaper4k">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".activities.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.kkinfosis.gamingwallpaper4k.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.ActivitySplash"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.kkinfosis.gamingwallpaper4k.UnsafeOkHttpGlideModule"
+            android:value="GlideModule" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ActivityWallpaperByCategory"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ActivitySlideImage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".activities.NewActivitySlideImage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+        <activity
+            android:name=".activities.ActivitySetAsWallpaper"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:theme="@style/AppMaterialTheme" />
+        <activity
+            android:name=".activities.ActivitySetAsWallpaperForCategory"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:theme="@style/AppMaterialTheme" />
+
+
+        <activity android:name=".activities.TimerActivity" />
+
+        <service
+            android:name=".activities.ServiceForWallpaper"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperServices" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.AdFreeActivity"
+            android:theme="@style/DaarkkAppTheme" />
+        <activity android:name=".activities.NotificationListActivity" />
+
+        <activity
+            android:name=".activities.DownloadViewer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <!--<activity-->
+        <!--android:name="com.karumi.dexter.DexterActivity"-->
+        <!--android:theme="@style/Dexter.Internal.Theme.Transparent" />-->
+
+        <!--<meta-data-->
+        <!--android:name="onesignal_app_id"-->
+        <!--android:value="3bb270bf-3b17-4cbf-9e63-637cef75b1d9" />-->
+        <!--<meta-data-->
+        <!--android:name="onesignal_google_project_number"-->
+        <!--android:value="str:537463306369" />-->
+
+        <!--<receiver-->
+        <!--android:name="com.onesignal.GcmBroadcastReceiver"-->
+        <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+        <!--<intent-filter android:priority="999">-->
+        <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+        <!--<category android:name="com.bestgamingzone.wallpaper" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver android:name="com.onesignal.NotificationOpenedReceiver" />-->
+
+        <!--<service android:name="com.onesignal.GcmIntentService" />-->
+        <!--<service-->
+        <!--android:name="com.onesignal.GcmIntentJobService"-->
+        <!--android:permission="android.permission.BIND_JOB_SERVICE" />-->
+        <!--<service-->
+        <!--android:name="com.onesignal.RestoreJobService"-->
+        <!--android:permission="android.permission.BIND_JOB_SERVICE" />-->
+        <!--<service-->
+        <!--android:name="com.onesignal.RestoreKickoffJobService"-->
+        <!--android:permission="android.permission.BIND_JOB_SERVICE" />-->
+        <!--<service-->
+        <!--android:name="com.onesignal.SyncService"-->
+        <!--android:stopWithTask="true" />-->
+        <!--<service-->
+        <!--android:name="com.onesignal.SyncJobService"-->
+        <!--android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
+        <!--<activity-->
+        <!--android:name="com.onesignal.PermissionsActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--<service android:name="com.onesignal.NotificationRestoreService" />-->
+
+        <!--<receiver android:name="com.onesignal.BootUpReceiver">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />-->
+        <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+        <!--<action android:name="android.intent.action.QUICKBOOT_POWERON" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver android:name="com.onesignal.UpgradeReceiver">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+        <!--android:name="com.google.firebase.messaging.FirebaseMessagingService"-->
+        <!--android:exported="true">-->
+        <!--<intent-filter android:priority="-500">-->
+        <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+        <!--<service-->
+        <!--android:name="com.google.firebase.components.ComponentDiscoveryService"-->
+        <!--android:exported="false">-->
+        <!--<meta-data-->
+        <!--android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"-->
+        <!--android:value="com.google.firebase.components.ComponentRegistrar" />-->
+        <!--<meta-data-->
+        <!--android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"-->
+        <!--android:value="com.google.firebase.components.ComponentRegistrar" />-->
+        <!--</service>-->
+
+        <!--<receiver-->
+        <!--android:name="com.google.android.gms.measurement.AppMeasurementReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false" />-->
+        <!--<receiver-->
+        <!--android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="true"-->
+        <!--android:permission="android.permission.INSTALL_PACKAGES">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.android.vending.INSTALL_REFERRER" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+        <!--android:name="com.google.android.gms.measurement.AppMeasurementService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false" />-->
+        <!--<service-->
+        <!--android:name="com.google.android.gms.measurement.AppMeasurementJobService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false"-->
+        <!--android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
+        <!--<receiver-->
+        <!--android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"-->
+        <!--android:exported="true"-->
+        <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<service-->
+        <!--android:name="com.google.firebase.iid.FirebaseInstanceIdService"-->
+        <!--android:exported="true">-->
+        <!--<intent-filter android:priority="-500">-->
+        <!--<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+        <!--<activity-->
+        <!--android:name="com.google.android.gms.common.api.GoogleApiActivity"-->
+        <!--android:exported="false"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--<provider-->
+        <!--android:name="com.google.firebase.provider.FirebaseInitProvider"-->
+        <!--android:authorities="com.bestgamingzone.wallpaper.firebaseinitprovider"-->
+        <!--android:exported="false"-->
+        <!--android:initOrder="100" />-->
+        <!--<meta-data-->
+        <!--android:name="com.android.vending.derived.apk.id"-->
+        <!--android:value="1" />-->
+        <!--<service android:name="MyFirebaseMessagingService">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+
+      
+    </application>
+
+</manifest>

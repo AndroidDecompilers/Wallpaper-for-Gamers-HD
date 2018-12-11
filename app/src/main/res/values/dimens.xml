@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_offset">0.0dp</dimen>
+    <dimen name="category_height">250.0dip</dimen>
+    <dimen name="category_width">350.0dip</dimen>
+    <dimen name="image_height">300.0dip</dimen>
+    <dimen name="image_width">180.0dip</dimen>
+</resources>

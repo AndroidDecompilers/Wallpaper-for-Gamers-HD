@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_slider"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/relativeLayout" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_above="@+id/relativeLayout"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_gradient_down"
+            android:gravity="bottom|center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/fab_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="100.0dip"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_toolbar_unlove" />
+
+            <ImageButton
+                android:id="@+id/fab_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="100.0dip"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_toolbar_download" />
+
+            <ImageButton
+                android:id="@+id/fab_set_as_wallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@drawable/ic_toolbar_apply_options"
+                android:src="@drawable/ic_toolbar_apply_options" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

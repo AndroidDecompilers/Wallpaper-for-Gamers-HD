@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/rewardedadbtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10.0sp"
+        android:layout_marginTop="100.0dip"
+        android:layout_marginRight="10.0sp"
+        android:text="Tap on Button to See Rewarded Ad" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10.0sp"
+        android:layout_marginTop="70.0dip"
+        android:layout_marginRight="10.0sp"
+        android:text="Note: The ads will get disabled only when you will see the full rewarded ad. And the ads will get disabled only for 1 minutes"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

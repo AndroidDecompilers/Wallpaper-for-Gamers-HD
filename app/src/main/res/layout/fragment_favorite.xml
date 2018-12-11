@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:padding="15.0dip"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_offset"
+            android:clipToPadding="false"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/lyt_no_favorite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="100.0dip"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/no_item_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:text="@string/no_favorite_found"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

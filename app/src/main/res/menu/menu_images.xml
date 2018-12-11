@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_fav"
+        android:icon="@drawable/ic_toolbar_unlove"
+        android:title="@string/menu_fav"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_set_as_wallpaper"
+        android:title="@string/menu_set_as_wallpaper"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_save"
+        android:title="@string/menu_save"
+        android:visible="false"
+        app:showAsAction="collapseActionView" />
+</menu>
